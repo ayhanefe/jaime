@@ -4,41 +4,10 @@
     <meta charset="utf-8">
     <title>ICE COLD</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-
-function update()
-{
-    $.post("server.php", {}, function(data){ $("#screen").val(data);});
-
-    setTimeout('update()', 1000);
-}
-
-$(document).ready(
-
-function()
-    {
-     update();
-
-     $("#button").click(
-      function()
-      {
-       $.post("server.php",
-    { message: $("#message").val()},
-    function(data){
-    $("#screen").val(data);
-    $("#message").val("");
-    }
-    );
-      }
-     );
-    });
-
-
-</script>
   </head>
   <body>
     <marquee class="title" scrollamount="30">
+      <img src="img/skibi.gif" class="skibi" alt="He wouldn't sing">
       <font color="yellow">WPS </font>
       <font color="pink">APPRECIATES </font>
       <font color="white">YOU </font>
@@ -54,6 +23,8 @@ function()
       <marquee class="title absolute" scrollamount="50">
         <font color="yellow">NIIIIIIIIIIICE</font>
       </marquee>
+      <img src="img/ice.png" class="p25 circle" alt="Ice">
+      <img src="img/icecold.png" class="" alt="cold">
       <img src="img/cheatn.gif" class="cht" alt="He wouldn't sing">
       <img src="img/cheatn.gif" class="cht" alt="He wouldn't sing">
       <img src="img/cheatn.gif" class="cht" alt="He wouldn't sing">

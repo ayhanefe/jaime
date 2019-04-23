@@ -26,12 +26,27 @@ body {
   100% {transform: rotate(360deg);}
 }
 
+@keyframes circle {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(270deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(90deg);}
+  100% {transform: rotate(0deg);}
+}
+
 .turn {
   width: 240px;
   height: 300px;
   animation: turn 3s infinite;
   animation-timing-function: linear;
   padding-right: 400px;
+}
+
+.circle {
+  width: 240px;
+  height: 300px;
+  animation: circle 2s infinite;
+  animation-timing-function: linear;
 }
 
 .p25 {
