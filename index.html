@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WPS Luvs U</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+function update()
+{
+    $.post("server.php", {}, function(data){ $("#screen").val(data);});
+
+    setTimeout('update()', 1000);
+}
+
+$(document).ready(
+
+function()
+    {
+     update();
+
+     $("#button").click(
+      function()
+      {
+       $.post("server.php",
+    { message: $("#message").val()},
+    function(data){
+    $("#screen").val(data);
+    $("#message").val("");
+    }
+    );
+      }
+     );
+    });
+
+
+</script>
+  </head>
+  <body>
+    <marquee class="title" scrollamount="30">
+      <font color="yellow">WPS </font>
+      <font color="pink">LOVES </font>
+      <font color="white">YOU </font>
+      <font color="purple">JAIME </font>
+      <img src="img/duck.jpg" class="title-img rotate40" alt="duckduckgo">
+    </marquee>
+    <div class="">
+      <img src="img/clinical.jpg" class="body-img" alt="">
+      <img src="img/200.gif" class="shrek" alt="">
+      <img src="img/cheatn.gif" class="cht" alt="He wouldn't sing">
+      <div id="content">
+        <textarea id="chatwindow" rows="19" cols="95" readonly></textarea><br>
+        <input id="chatnick" type="text" size="9" maxlength="10" placeholder="username">&nbsp;
+        <input id="chatmsg" type="text" size="80" maxlength="80"  onkeyup="keyup(event.keyCode);" placeholder="message">
+        <input type="button" value="add" onclick="submit_msg();" style="cursor:pointer;border:1px solid gray;"><br><br>
+      </div>
+    </div>
+
+  </body>
+</html>
